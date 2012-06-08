@@ -1,0 +1,89 @@
+
+\section{Background: Clay GDSM}
+
+% used existing gdsms 
+This analysis utilized the clay \gls{GDSM} developed by the \gls{UFD} campaign 
+which performed detailed calculations of radionuclide transport within the GoldSim simulation platform.  GoldSim is a commercial simulation environment \cite{golder_goldsim_2010, golder_goldsim_ct_2010}.  Probabilistic elements of the GoldSim modelling framework enable the models to incorporate simple probabilistic \gls{FEPs} that affect repository performance including waste package failure, waste form dissolution, and an optional vertical advective fast pathway \cite{clayton_generic_2011}. 
+
+The GoldSim framework and its contaminant transport module provide a radionuclide transport toolset that the \glspl{GDSM} has utilized to simulate chemical and physical attenuation processes including radionuclide solubility, dispersion phenomena, and reversible sorption \cite{golder_goldsim_2010, golder_goldsim_ct_2010}. 
+
+\subsection{Mean of the Peak Annual Dose}
+
+In this analysis, repository performance is quantified by radiation dose to a 
+hypothetical receptor. Specifically, this sensitivity analysis focuses 
+on parameters that affect the mean of the peak annual dose.  The mean of the 
+peak annual dose,
+
+\begin{align} \label{MoP}
+  D_{MoP,i} &= \frac{\sum_{r=1}^{N}{\max\left[\left.D_{r,i}(t)\right|_{\forall t}\right]}}{N}
+  \intertext{where}
+  D_{MoP,i} &= \mbox{mean of the peak annual dose due to isotope i} [mrem/yr]\nonumber\\
+  D_{i}(t) &= \mbox{annual dose in realization r at time t due to isotope i } [mrem/yr]\nonumber\\
+  N &= \mbox{Number of realizations, } \nonumber
+\end{align}
+
+is a conservative metric of repository performance. The mean of the 
+peak annual dose should not be confused with the peak of the mean annual dose,
+
+\begin{align} \label{PoM}
+  D_{PoM,i} &= \max\left[{\frac{\sum_{r=1}^{N}{\left.D_{r,i}(t)\right|_{\forall t}}}{N}}\right]\\
+            &= \mbox{peak of the mean annual dose due to isotope i } [mrem/yr].\nonumber
+\end{align}
+
+The mean of the peak annual dose rate given in equation \eqref{MoP} 
+captures trends as well as the peak of the mean annual dose rate given 
+in equation \eqref{PoM}. However, the mean of the peaks metric, $D_{MoP,i}$, was 
+chosen in this analysis because it is more conservative since it is able to 
+capture temporally local dose maxima and consistently reports higher dose values 
+than the peak of the means, $D_{PoM,i} $.
+
+\subsection{Sampling Scheme}
+
+The multiple barrier system modeled in the clay \gls{GDSM} calls for a 
+multi-faceted sensitivity analysis. The importance of any single component or 
+environmental parameter must be analyzed in the context of the full system of 
+barrier components and environmental parameters. Thus, this analysis has 
+undertaken an analysis strategy to develop a many dimensional overview of the 
+key factors in modeled repository performance. 
+
+To address this, both individual and dual parametric studies were performed. 
+Individual parameter studies varied a single parameter of interest in 
+detail over a broad range of values. Dual parameter sensitivity studies were 
+performed for pairs of parameters expected to exhibit some covariance. For 
+each parameter or pair of parameters, forty simulation 
+groups varied the parameter or parameters within the range considered. 
+
+For each simulation group, a 100 realization simulation was completed. Each
+realization held the parameters being analyzed as constant and sampled 
+stochastic values for uncertain parameters not being studied.  A sampling scheme 
+developed in previous generic disposal media modeling was implemented in this 
+model in order to ensure that the each 100 realization simulation sampled 
+identical values for uncertain parameters \cite{clayton_generic_2011, 
+nutt_generic_2009}.  
+
+In order to independently analyze the dose contributions from radioisotope 
+groups, actinide chains were run independently. This allowed an evaluation of 
+the importance of daughter production from distinct actinide chains.
+
+These analyses were performed using the Clay \gls{GDSM} developed by the 
+\gls{UFD} campaign\cite{clayton_generic_2011}. The Clay \gls{GDSM} is built on the 
+GoldSim software and tracks the movement of key radionuclides through the 
+natural system and engineered barriers \cite{golder_goldsim_2010, 
+golder_goldsim_ct_2010}.
+
+The disposal concept modeled by the Clay \gls{GDSM} includes an \gls{EBS} which 
+can undergo rate based dissolution and barrier failure. Releases from the \gls{EBS} enter 
+near field and subsequently far field host rock regions in which diffusive and 
+advective transport take place, attenuated by solubility limits as well as 
+sorption and dispersion phenomena.  
+
+The Clay \gls{GDSM} models a single waste form, a waste package, additional 
+\glspl{EBS}, 
+an \gls{EDZ}, and a far field zone using a batch reactor mixing cell framework. This waste unit cell is modeled 
+with boundary conditions such that it may be repeated assuming an infinite 
+repository configuration. The waste form and engineered barrier system are modeled as well-mixed volumes 
+and radial transport away from the cylindrical base case unit cell is modeled as  
+one dimensional. Two radionuclide release pathways are considered. One is the nominal, 
+undisturbed case, while the other is a fast pathway capable of simulating a 
+hypothetical disturbed case 
+\cite{clayton_generic_2011}.

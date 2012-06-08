@@ -1,0 +1,49 @@
+%        File: ansWin2012.tex
+%     Created: Friday, June 8, 2012 
+
+\documentclass{anstrans}
+
+%% To use the glossaries acronym package, you'll need to define any acronyms you intend to 
+%% use. You can define acronyms with \newacronym{label}[acronym]{written out form}
+%% To refer to them in the text use \gls{label}
+\usepackage[acronym,toc]{glossaries}
+\include{acros}
+\makeglossaries
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Sensitivity Studies : UFD Clay Generic Disposal System Model}
+
+\author{Kathryn D.~Huff$^{1,2}$, W. Mark~Nutt$^2$}
+%% uncomment these next five only if using anstrans
+\institute{$^1$Nuclear Engineering \& Engineering Physics Dept., University of 
+Wisconsin, Madison, WI, 53706\\
+$^2$Nuclear Engineering Division, Argonne National Laboratory, Argonne, IL, 
+60439}
+\email{khuff@cae.wisc.edu \& wnutt@anl.gov}
+\usepackage{graphicx}
+\usepackage{booktabs} % nice rules for tables
+\usepackage{microtype} % if using PDF
+\newcommand{\units}[1] {\:\text{#1}}%
+\newcommand{\SN}{S$_N$}%{S$_\text{N}$}%{$S_N$}%
+
+\date{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{intro}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{clay}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Background: Need for Abstracted Models}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{results}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{ans}
+\bibliography{bibliography}
+\end{document}
