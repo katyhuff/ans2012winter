@@ -1,26 +1,13 @@
 
 \subsection{Solubility Coefficients}
 
-This study varied the solubility coefficients for each isotope in the simulation 
-
 The dissolution behavior of a solute in an aqueous solutions is called its 
 solubility. This behavior is limited by the solute's solubility limit, described  
 by an equilibrium constant that depends upon temperature, water chemistry, and 
-the properties of the element. The equilibrium constant for many reactions are known, and can be found in 
-chemical tables.
+the properties of the element. The equilibrium constant for many reactions are 
+known, and can be found in chemical tables.
 
-When $IAP/K<1$, the solution is undersaturated with respect to the products. When, 
-conversely, $IAP/K>1$, the solution is oversaturated and precipitation of solids 
-in the volume will occur. 
-
-The solubility coefficients were varied in this simulation using a multiplier. 
-This multiplier multiplied the most likely values of solubility for each 
-element, so the relative solubility between elements was preserved.  Forty 
-values of solubility coefficient multiplier were used to change the far field 
-solubility.  The values of the solubility multiplier were deliberately varied 
-over many magnitudes, from $1\time10^{-9}$ through $5\times10^{-10}$. 
-
-For solubility limits below a certain threshold, the dose releases were directly 
+For solubility limits below a threshold, the dose releases were directly 
 proportional to the solubility limit, indicating that the radionuclide 
 concentration saturated the groundwater up to the solubility limit near the 
 waste form.  For solubility limits above the threshold, however, further 
@@ -29,7 +16,15 @@ situation in which the solubility limit is so high that even complete
 dissolution of the waste inventory into the pore water is insufficient to reach 
 the solubility limit.
 
-In Figures \ref{fig:SolSumFactor} and \ref{fig:SolSum}, it is clear that for 
+In Figures \ref{fig:SolSum}, for example, it is clear that for 
 solubility constants lower than a threshold, the relationship between peak 
 annual dose and solubility limit is strong.
 
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\linewidth]{Solubility_Summary.eps}
+  \caption{Solubility limit sensitivity. The peak annual dose due to an 
+  inventory, 
+  $N$, of each isotope.}
+  \label{fig:SolSum}
+\end{figure}

@@ -23,45 +23,51 @@ dispersion parameters. This phenomenon can be seen in the figures below in which
 transition between regimes for higher degradation rates happens at lower mass 
 factors than transition between regimes for lower degradation rates. 
 
-Safety indicators for post closure repository performance have been developed by 
-the \gls{UFD} campaign which utilize the inventory multiplier that was varied in 
-this study \cite{nutt_generic_2009}. These indicators are normalized by a 
-normalization factor (100 mrem/yr) recommended by the \gls{IAEA} as the limit to 
-``relevant critical members of the public'' \cite{iaea_international_1996}. The functional form for 
-this safety indicator for a single waste category, \gls{HLW}, is just 
-
-\begin{align}
-SI_{G} &= \left(\frac{\sum_{i=1}^{N}D_{G,i}(I_i, F_{d})}{100mrem/yr}\right)[GWe/yr].
-\label{indicator}
-\intertext{where}
-SI_{G} &= \mbox{Safety indicator for disposal in media type G}[GWe/yr]\nonumber\\
-N &= \mbox{Number of key radionuclides considered in this indicator}\nonumber\\
-D_{G,i} &= \mbox{Peak dose rate from isotope i in media type G}[mrem/yr]\nonumber\\
-F_{d} &= \mbox{Fractional waste form degradation rate}[1/yr].\nonumber
-\end{align}
-
-Tables \ref{tab:WFDegIndicatorsTcICsSeCl}, 
-\ref{tab:WFDegIndicatorsPdSnZrNb}, and 
-\ref{tab:WFDegIndicatorsActinides} report the safety indicators for 
-various independent isotopes and, where applicable, their daughters. 
-
 The peaks for highly soluble, non sorbing elements such as $I$ and $Cl$
 are directly proportional to mass factor for most 
-values of waste form degradation rates. This effect can be seen in Figures 
-\ref{fig:WFDegI129}, \ref{fig:WFDegI129MF}, \ref{fig:WFDegCl36}, and 
-\ref{fig:WFDegCl36MF}. 
+values of waste form degradation rates. 
 
-
-Highly soluble and non-sorbing $^{129}I$ demonstrates a direct proportionality between dose rate and 
-fractional degradation rate until a turnover where other natural system 
-parameters dampen transport. Highly soluble and non-sorbing $^{129}I$ domonstrates a direct 
-proportionality to the inventory multiplier.
+In Figure \ref{fig:WFDegI129}, highly soluble and non-sorbing $^{129}I$ 
+demonstrates a direct proportionality between dose rate and fractional 
+degradation rate until a turnover where other natural system parameters dampen 
+transport. It also domonstrates a direct proportionality to the inventory 
+multiplier, as seen in Figure \ref{fig:WFDegI129MF}. 
 
 The peaks for solubility limited, sorbing elements such as $Tc$ and $Np$, on the 
 other hand, have a more dramatic turnover.  For very high degradation rates, the 
 dependence on mass factor starts to round off due to attenuation by solubility 
-limits, as can be seen in Figures \ref{fig:WFDegNp237}, \ref{fig:WFDegNp237MF}, 
+limits, as can be seen in Figures 
 \ref{fig:WFDegTc99}, and \ref{fig:WFDegTc99MF}.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=\linewidth]{129IDegRate.eps}
+  \caption{$^{129}I$ waste form degradation rate sensitivity.}
+  \label{fig:WFDegI129}
+\end{figure}
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=\linewidth]{129IMF.eps}
+  \caption{$^{129}I$ inventory multiplier sensitivity.}
+  \label{fig:WFDegI129MF}
+\end{figure}
+
+
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=\linewidth]{99TcDegRate.eps}
+  \caption{$^{99}Tc$ waste form degradation rate sensitivity.}
+  \label{fig:WFDegTc99}
+\end{figure}
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=\linewidth]{99TcMF.eps}
+  \caption{$^{99}Tc$ inventory multiplier sensitivity.}
+  \label{fig:WFDegTc99MF}
+\end{figure}
 
 Solubility limited and sorbing $^{99}Tc$ demonstrates a direct proportionality 
 to fractional degradation rate until attuation by its solubility limit and other 
