@@ -10,15 +10,16 @@ This radionuclide transport toolset simulates chemical and physical attenuation
 processes including radionuclide solubility, dispersion phenomena, and 
 reversible sorption \cite{golder_goldsim_2010, golder_goldsim_ct_2010}.  
 Probabilistic elements of the GoldSim modelling framework enable the models to 
-incorporate simple probabilistic \gls{FEPs} that affect repository performance 
-including waste package failure, waste form dissolution, and an optional 
-vertical advective fast pathway \cite{clayton_generic_2011}.
+incorporate simple probabilistic \gls{FEPs} that affect repository performance. 
 
-The disposal concept modeled by the Clay \gls{GDSM} includes an \gls{EBS} which 
-can undergo rate based dissolution and barrier failure. Releases from the \gls{EBS} enter 
-near field and subsequently far field host rock regions in which diffusive and 
-advective transport take place, attenuated by solubility limits as well as 
-sorption and dispersion phenomena \cite{clayton_generic_2011}.
+The disposal concept modeled by the Clay \gls{GDSM} includes an optional 
+vertical advective fast pathway as well as an \gls{EBS} which 
+can undergo rate based dissolution and barrier failure \cite{clayton_generic_2011}.
+
+Releases from the \gls{EBS} enter near field and subsequently far field host 
+rock regions in which diffusive and advective transport take place, attenuated 
+by solubility limits as well as sorption and dispersion phenomena 
+\cite{clayton_generic_2011}.
 
 \subsection{Mean of the Peak Annual Dose}
 
@@ -32,16 +33,16 @@ peak annual dose,
   \intertext{where}
   D_{MoP,i} &= \mbox{mean of the peak annual dose due to isotope i} [mrem/yr]\nonumber\\
   D_{i}(t) &= \mbox{annual dose in realization r at time t due to isotope i } [mrem/yr]\nonumber\\
-  N &= \mbox{Number of realizations, } \nonumber
+  N &= \mbox{number of realizations, } \nonumber
 \end{align}
 
 is a conservative metric of repository performance and should not be confused 
-with the peak of the mean annual dose,
+with the peak of the mean annual dose.
 
-\begin{align} \label{PoM}
-  D_{PoM,i} &= \max\left[{\frac{\sum_{r=1}^{N}{\left.D_{r,i}(t)\right|_{\forall t}}}{N}}\right]\\
-            &= \mbox{peak of the mean annual dose due to isotope i } [mrem/yr].\nonumber
-\end{align}
+%\begin{align} \label{PoM}
+%  D_{PoM,i} &= \max\left[{\frac{\sum_{r=1}^{N}{\left.D_{r,i}(t)\right|_{\forall t}}}{N}}\right]\\
+%            &= \mbox{peak of the mean annual dose due to isotope i } [mrem/yr].\nonumber
+%\end{align}
 
 \subsection{Sampling Scheme}
 
