@@ -47,13 +47,46 @@ with the peak of the mean annual dose,
 
 This analysis has undertaken an analysis strategy to develop a many dimensional 
 overview of the key factors in modeled repository performance. To acheive this, 
-both individual and dual parametric studies were performed.
+both individual and dual parametric cases were performed.
 
-Individual parameter studies varied a single parameter of interest in 
-detail over a broad range of values. Dual parameter sensitivity studies were 
+Individual parameter cases varied a single parameter of interest in 
+detail over a broad range of values. Dual parameter cases were 
 performed for pairs of parameters expected to exhibit some covariance. For 
 each parameter or pair of parameters, forty simulation 
-groups varied the parameter or parameters within the range considered. 
+groups varied the parameter or parameters within the range considered. Each 
+case and its parametric range are detailed in Table \ref{tab:Cases}. 
+
+\begin{table}[ht!]
+\centering
+\footnotesize{
+\begin{tabular}{|l|l|l|r|r|}
+\multicolumn{5}{c}{\textbf{Simulation Cases}}\\
+\hline
+\textbf{Case} & \textbf{Parameter} & \textbf{Units} & \textbf{Min. Value} & \textbf{Max. Value}\\
+\hline
+I     & $D_{eff}$    & $[m^2\cdot s^{-1}]$       & $10^{-8}$    &  $10^{-5}$ \\
+      & Inventory              & [MTHM]         & $10^{-4}$    &  $10^1$ \\
+\hline
+II    & $V_{adv, y}$ & $[m \cdot yr^{-1}]$       & $6.31\times10^{-8}$  &  $6.31\times10^{-4}$ \\
+      & $D_{eff}$    & $[m^2\cdot s^{-1}]$       & $10^{-8}$    &  $10^{-5}$ \\
+\hline
+III   & Solubility Factor      & $[-]$       & $1\times10^{-9}$    &  $5\times10^{10}$ \\
+\hline
+IV    & Partition Factor       & $[-]$       & $1\times10^{-9}$    &  $5\times10^{10}$ \\
+\hline
+V     & $R_{WFDegradation}$           & $[yr^{-1}]$       & $10^{-9}$    &  $10^{-2}$ \\
+      & Inventory              & [MTHM]         & $10^{-4}$    &  $10^1$ \\
+\hline 
+VI    & $t_{WPFail}$        & $[yr]$         & $10^3$    &  $10^7$ \\
+      & $D_{eff}$           & $[m^2\cdot s^{-1}]$       & $10^{-8}$    &  $10^{-5}$ \\
+%<++>  & <++>                   & $[<++>]$       & $<++>$    &  $<++>$ \\
+\hline
+\end{tabular}
+\caption{Each dual and single parameter simulation case had 40 simulation 
+groups of 100 realizations each.}
+\label{tab:Cases}
+}
+\end{table}
 
 For each simulation group, a 100 realization simulation was completed. Each
 realization held the parameters being analyzed as constant and sampled 
@@ -63,24 +96,3 @@ model in order to ensure that the each 100 realization simulation sampled
 identical values for uncertain parameters \cite{clayton_generic_2011, 
 nutt_generic_2009}.  
 
-\begin{table}
-\centering
-\begin{tabular}{|l|l|l|r|r|}
-\multicolumn{5}{|c|}{\textbf{Simulations}}
-\hline
-\hline
-\textbf{Case} & \textbf{Parameter} & \textbf{Units} & \textbf{Min. Value} & \textbf{Max. Value}\\
-\hline
-I     & Diffusion Coefficient  & $[m^2\cdot s^{-1}]$       & $10^{-8}$    &  $10^{-5}$ \\
-      & Inventory              & $[MTHM ref. SNF]$    & $10^{-4}$    &  $10^1$ \\
-\hline
-<++>  & <++>                   & $[<++>]$       & $<++>$    &  $<++>$ \\
-<++>  & <++>                   & $[<++>]$       & $<++>$    &  $<++>$ \\
-<++>  & <++>                   & $[<++>]$       & $<++>$    &  $<++>$ \\
-<++>  & <++>                   & $[<++>]$       & $<++>$    &  $<++>$ \\
-<++>  & <++>                   & $[<++>]$       & $<++>$    &  $<++>$ \\
-<++>  & <++>                   & $[<++>]$       & $<++>$    &  $<++>$ \\
-\end{tabular}
-\caption{<+Caption text+>}
-\label{tab:<+label+>}
-\end{table}<++>
