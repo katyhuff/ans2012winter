@@ -1,0 +1,103 @@
+%        File: pres.tex
+%     Created: Tues June 19 07:00 AM 2012 C
+%
+%\documentclass[11pt,handout]{beamer}
+\documentclass[9pt]{beamer}
+
+\usepackage{graphicx}
+\usepackage{booktabs} % nice rules for tables
+\usepackage{microtype} % if using PDF
+\usepackage{bigints}
+\newcommand{\units}[1] {\:\text{#1}}%
+\newcommand{\SN}{S$_N$}%{S$_\text{N}$}%{$S_N$}%
+\DeclareMathOperator{\erf}{erf}
+\setbeamertemplate{caption}[numbered]
+
+\usetheme[white]{Wisconsin}
+%\title[short title]{long title}
+\title[Cyclus and Cyder]{ Cyclus and Cyder : Open Source Tools for Fuel Cycle and Repository Analysis}
+\title[Key Disposal Processes and Parameters]{ Key Processes and Parameters in a Generic Clay Disposal System Model}
+%\subtitle[short subtitle]{long subtitle}
+\subtitle[ANS2012]{2012 American Nuclear Society Winter Meeting, San Diego} 
+%\author[short name]{long name}
+\author[Kathryn Huff]{Kathryn D.~Huff$^{1,2}$ \& W. Mark Nutt$^2$}
+%\date[short date]{long date}
+\date[11.13.2012]{November 13, 2012}
+%\institution[short name]{long name}
+\institute[UW-Madison]{$^1$University of Wisconsin-Madison \& $^2$Argonne National Laboratory}
+%page numbers
+\setbeamertemplate{footline}[page number]
+%Those icons in the references are terrible looking
+\setbeamertemplate{bibliography item}[text]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[acronym,toc]{glossaries}
+\include{acros}
+\makeglossaries
+
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% From uw-beamer Here's a handy bit of code to place at 
+%% the beginning of your presentation (after \begin{document}):
+\newcommand*{\alphabet}{ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz}
+\newlength{\highlightheight}
+\newlength{\highlightdepth}
+\newlength{\highlightmargin}
+\setlength{\highlightmargin}{2pt}
+\settoheight{\highlightheight}{\alphabet}
+\settodepth{\highlightdepth}{\alphabet}
+\addtolength{\highlightheight}{\highlightmargin}
+\addtolength{\highlightdepth}{\highlightmargin}
+\addtolength{\highlightheight}{\highlightdepth}
+\newcommand*{\Highlight}{\rlap{\textcolor{HighlightBackground}{\rule[-\highlightdepth]{\linewidth}{\highlightheight}}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%--------------------------------%%
+\frame{
+\titlepage
+}
+%%--------------------------------%%
+\AtBeginSection[]{
+\begin{frame}[c!]
+  \frametitle{Outline}
+  \tableofcontents[currentsection]
+\end{frame}
+}
+
+%%--------------------------------%%
+%%--------------------------------%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \input{pres_intro}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \input{clay}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \input{pres_acks}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}<++>
+
+
+
+%%--------------------------------%%
+%%--------------------------------%%
+\begin{frame}[allowframebreaks]
+  \frametitle{References}
+  \bibliographystyle{plain}
+  {\footnotesize \bibliography{ans2012pres} }
+
+\end{frame}
+
+%%--------------------------------%%
+
+
+
+
+
+\end{document}
+
+
+
+

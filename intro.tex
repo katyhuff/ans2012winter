@@ -1,15 +1,26 @@
 
-\section{Introduction}
+\section{Clay}
 
-Sensitivity analysis was performed with respect to various key processes and 
-parameters affecting long-term post-closure performance of geologic repositories 
-in clay media. Based on the detailed computational Clay 
-\gls{GDSM} developed by the \gls{UFD} campaign \cite{clayton_generic_2011}, 
-these results provide an overview of the relative importance of processes 
-that affect the repository performance of a generic clay disposal concept model. 
-Further analysis supports a basis for development of rapid abstracted models in 
-the context of system level fuel cycle simulation. Processes and parameters 
-found to influence repository performance include the rate of waste form 
-degradation, timing of waste package failure, and various coupled geochemical 
-and hydrologic characteristics of the natural system including diffusion, 
-solubility, and advection.
+These analyses were performed using the Clay \gls{GDSM} developed by the 
+\gls{UFD} campaign\cite{clayton_generic_2011}. The Clay \gls{GDSM} is built on the 
+GoldSim software and tracks the movement of key radionuclides through the 
+natural system and engineered barriers \cite{golder_goldsim_2010, 
+golder_goldsim_ct_2010}.
+
+The disposal concept modeled by the Clay \gls{GDSM} includes an \gls{EBS} which 
+can undergo rate based dissolution and barrier failure. Releases from the \gls{EBS} enter 
+near field and subsequently far field host rock regions in which diffusive and 
+advective transport take place, attenuated by solubility limits as well as 
+sorption and dispersion phenomena.  
+
+The Clay \gls{GDSM} models a single waste form, a waste package, additional 
+\glspl{EBS}, 
+an \gls{EDZ}, and a far field zone using a batch reactor mixing cell framework. This waste unit cell is modeled 
+with boundary conditions such that it may be repeated assuming an infinite 
+repository configuration. The waste form and engineered barrier system are modeled as well-mixed volumes 
+and radial transport away from the cylindrical base case unit cell is modeled as  
+one dimensional. Two radionuclide release pathways are considered. One is the nominal, 
+undisturbed case, while the other is a fast pathway capable of simulating a 
+hypothetical disturbed case 
+\cite{clayton_generic_2011}.
+
