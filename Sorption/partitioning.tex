@@ -1,5 +1,6 @@
 
-\subsection{The Partition Coefficient}
+\begin{frame}[c]
+  \frametitle{Case IV : Partition Coefficient}
 
 This analysis investigated the peak dose rate contribution from various 
 radionuclides to the partition coefficient of those radionuclides. 
@@ -10,7 +11,10 @@ aqueous phase of the host medium. It is a common empirical coefficient used to
 capture the effects of a number of retardation mechanisms. The coefficient 
 $K_d$, in units of $[m^3\cdot kg^{-1}]$, is the ratio of the mass of contaminant in the 
 solid to the mass of contaminant in the solution.
+\end{frame}
 
+\begin{frame}[c]
+  \frametitle{Case IV : Partition Coefficient}
 The retardation factor, $R_f$, which is the ratio between velocity of water through a 
 volume and the velocity of a contaminant through that volume, can be expressed 
 in terms of the partition coefficient,
@@ -23,11 +27,10 @@ in terms of the partition coefficient,
   \intertext{and}
   n_e &= ~~\mbox{effective porosity of the medium}[\%].\nonumber
 \end{align}
+\end{frame}
 
-
-
-
-\subsubsection{Parametric Range}
+\begin{frame}[c]
+  \frametitle{Case IV : Partition Coefficient}
 
 The parameters in this model were all set to the default values except a multiplier 
 applied to the partitioning $K_d$ coefficients.
@@ -36,10 +39,10 @@ The multiplier took the forty values $1\times10^{-9}, 5\times10^{-8}, \cdots
 5\times10^{10}$ Only the far field partition coefficients were altered by this 
 factor. Partition coefficients effecting the EDZ and fast pathway were not 
 changed.
+\end{frame}
 
-
-\subsubsection{Results}
-
+\begin{frame}[c]
+  \frametitle{Case IV : Partition Coefficient}
 The expected inverse relationship between the retardation 
 factor and resulting peak annual dose was found for all elements that were not 
 assumed to be effectively infinitely soluble. In the low retardation coefficient 
@@ -51,6 +54,10 @@ annual dose is inversely related to the retardation coefficient. Between these
 two regimes was a transition regime, in which the $K_d$ factor ranges from $1\times10^{-5}$ to 
 $5\times10^{0} [-]$.
 
+\end{frame}
+
+\begin{frame}[c]
+  \frametitle{Case IV : Partition Coefficient}
 It is clear from Figures \ref{fig:KdSumFactor} and \ref{fig:KdSum} that 
 for retardation coefficients greater than a threshold, the 
 relationship between peak annual dose and retardation coefficient is a strong 
@@ -58,18 +65,22 @@ inverse one.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{./chapters/nuclide_sensitivity/clay/Sorption/Retardation_Summary_kdFactor.eps}
+\includegraphics[width=\linewidth]{Sorption/Retardation_Summary_kdFactor.eps}
 \caption{$K_d$ factor sensitivity.  The peak annual dose due to an inventory, 
 $N$, of each isotope.}
 \label{fig:KdSumFactor}
 \end{figure}
+\end{frame}
+
+\begin{frame}[c]
+  \frametitle{Case IV : Partition Coefficient}
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{./chapters/nuclide_sensitivity/clay/Sorption/Retardation_Summary_kd.eps}
+\includegraphics[width=\linewidth]{Sorption/Retardation_Summary_kd.eps}
 \caption{$K_d$ sensitivity.  The peak annual dose due to an inventory, 
 $N$, of each isotope.}
 \label{fig:KdSum}
 \end{figure}
+\end{frame}
 
-\clearpage
