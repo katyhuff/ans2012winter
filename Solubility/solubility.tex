@@ -1,17 +1,8 @@
 
 \begin{frame}[c]
   \frametitle{Case III : Solubility Coefficient}
-This study varied the solubility coefficients for each isotope in the simulation 
-to help inform the effect of reprocessing on repository benefit for the clay 
-repository scenario. The importance of the actinide contribution relative to the 
-contribution from $^{129}I$, $^{79}Se$, and $^{99}Tc$ was of particular 
-interest.
-\end{frame}
-
-\begin{frame}[c]
-  \frametitle{Case III : Solubility Coefficient}
 The dissolution behavior of a solute in an aqueous solutions is called its 
-solubility. This behavior is limited by the solute's solubility limit, described  
+\textbf{solubility}. This behavior is limited by the solute's solubility limit, described  
 by an equilibrium constant that depends upon temperature, water chemistry, and 
 the properties of the element. The solubility constant for ordinary solutes, 
 $K_s$ gives units of concentration, $[kg/m^3]$, and can be determined 
@@ -34,51 +25,11 @@ equilibrium between reactants and products.  For a reaction
 
 \begin{frame}[c]
   \frametitle{Case III : Solubility Coefficient}
-The equilibrium constant for many reactions are known, and can be found in 
-chemical tables. Thereafter, the solubility constraints of a solution at 
-equilibrium can be found algebraically.  In cases of salts that  dissociate in 
-aqueous solutions, this equilibrium constant is called the salt's solubility 
-product $K_{sp}$.
-\end{frame}
-
-\begin{frame}[c]
-  \frametitle{Case III : Solubility Coefficient}
-This equilibrium model, however, is only appropriate for dilute situations, and 
-nondilute solutions at  partial equilibrium must be treated with an activity 
-model by substituting the activities of the constituents  for their molal 
-concentrations,
-\begin{align}
-  [X] &= \gamma_x(X)
-  \intertext{where}
-  [X]  &= \mbox{ activity of X }[-]\nonumber\\
-  \gamma_x  &= \mbox{ activity coefficient of X}[-]\nonumber\\
-  (X)  &= \mbox{ molal concentration of X}[mol/m^3]\nonumber
-  \intertext{such that}
-  IAP &= \mbox{ Ion Activity Product }[-].\nonumber\\
-      &= \frac{[Y]^y[Z]^z}{[C]^c[D]^d}\\
-  \label{IAP}
-\end{align}
-The ratio between the IAP and the equilibrium constant $(IAP/K)$ quantifies
-the departure from equilibrium of a solution.  This information is useful during 
-the transient stage in which a solute is first introduced to a solution. When 
-$IAP/K<1$, the solution is undersaturated with respect to the products. When, 
-conversely, $IAP/K>1$, the solution is oversaturated and precipitation of solids 
-in the volume will occur. 
-\end{frame}
-
-\begin{frame}[c]
-  \frametitle{Case III : Solubility Coefficient}
-The solubility coefficients were varied in this simulation using a multiplier. 
 The reference solubilities for each element were multiplied by the multiplier 
 for each simulation group. This technique preserved relative solubility among 
-  elements. Forty values of solubility coefficient multiplier were used to change 
-the far field solubility. This did not alter any of the solubility in the
-EDZ, WF, or Fast Path solubilities.
+  elements. 
 
-The values of the solubility multiplier were deliberately varied over many 
-magnitudes, from $1\time10^{-9}$ through $5\times10^{10}$. This multiplier
-multiplied the most likely values of solubility for each element, so 
-the relative solubility between elements was preserved.
+\input{Solubility/sim_cases}
 \end{frame}
 
 
@@ -98,15 +49,14 @@ the solubility limit.
 \begin{frame}[c]
   \frametitle{Case III : Solubility Coefficient}
 
-In Figures \ref{fig:SolSumFactor} and \ref{fig:SolSum}, it is clear that for 
-solubility constants lower than a threshold, the relationship between peak 
-annual dose and solubility limit is strong.
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\linewidth]{Solubility/Solubility_Summary_SolFactor.eps}
-\caption{Solubility factor sensitivity. The peak annual dose due to an inventory, 
-$N$, of each isotope.}
+\caption{
+The peak annual dose due to an inventory, $N$, of each isotope.
+For solubility constants lower than the inventory threshold, the relationship between peak 
+annual dose and solubility limit is strong.}
 \label{fig:SolSumFactor}
 \end{figure}
 \end{frame}
@@ -117,8 +67,10 @@ $N$, of each isotope.}
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\linewidth]{Solubility/Solubility_Summary_Sol.eps}
-\caption{Solubility limit sensitivity. The peak annual dose due to an inventory, 
-$N$, of each isotope.}
+\caption{
+The peak annual dose due to an inventory, $N$, of each isotope.
+For solubility constants lower than the inventory threshold, the relationship between peak 
+annual dose and solubility limit is strong.}
 \label{fig:SolSum}
 \end{figure}
 \end{frame}
