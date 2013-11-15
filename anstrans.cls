@@ -37,7 +37,8 @@
 \newcommand{\email}[1]{\def\@email{#1}\@emaildefinedtrue}
 
 %%%%%%%%%%% SECTIONING %%%%%%%%%%%
-\setcounter{secnumdepth}{-2} %hide all section heading numbers
+% KDH commented the below, seeking I, I.A, II, II.A, II.B numbering
+%\setcounter{secnumdepth}{-2} %hide all section heading numbers
 
 \renewcommand\section{\@startsection
 	{section}{1}{0pt}%		%name, level, indent
@@ -45,6 +46,7 @@
 	{.75\baselineskip}%		%afterskip
 	{\reset@font\bf\MakeUppercase}%
 }
+\renewcommand{\thesection}{\Roman{section}} 
 
 \renewcommand\subsection{\@startsection
 	{subsection}{1}{0pt}%		%name, level, indent
@@ -52,6 +54,7 @@
 	{.75\baselineskip}%		%afterskip
 	{\reset@font\bf}%
 }
+\renewcommand{\thesubsection}{\thesection.\Alph{subsection}}
 
 \renewcommand\subsubsection{\@startsection
 	{subsubsection}{1}{-1em}%		%name, level, indent
@@ -59,6 +62,8 @@
 	{.5\baselineskip}%		%afterskip
 	{\reset@font\emph}%
 }
+\renewcommand{\thesubsubsection}{\thesubsection.\roman{subsection}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand\@biblabel[1]{#1.} %change from [x] to x.
 
