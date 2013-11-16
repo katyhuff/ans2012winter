@@ -10,7 +10,7 @@
 \ProvidesClass{anstrans}[2008/01/14 v1.1 ANS Transaction class]
 
 %%%%%%%%%%% TYPE AND GEOMETRY %%%%%%%%%%%
-\LoadClass[twocolumn,10pt]{article}
+\LoadClass[twocolumn,12pt]{article}
 
 \pagestyle{empty}						%no page numbering
 
@@ -25,6 +25,11 @@
 \RequirePackage{indentfirst}	% indent the leading paragraph
 \RequirePackage{amsmath}
 
+% for gray line
+\RequirePackage{xcolor}
+\RequirePackage{titlesec}
+
+\RequirePackage[scaled]{helvet}
 %%%%%%%%%%% REQUIRED VARIABLES %%%%%%%%%%%
 \newif\if@institutedefined
 \@institutedefinedfalse
@@ -35,6 +40,20 @@
 \@emaildefinedfalse
 \def\@email{\PackageWarning{anstrans}{No email address has been defined.}}
 \newcommand{\email}[1]{\def\@email{#1}\@emaildefinedtrue}
+
+\newif\if@keywordsdefined
+\@keywordsdefinedfalse
+\def\@keywords{\PackageWarning{anstrans}{No keywords have been defined.}}
+\newcommand{\keywords}[1]{\def\@keywords{#1}\@keywordsdefinedtrue}
+
+%%%%%%%%%%% ABSTRACT %%%%%%%%%%%
+\renewenvironment{abstract}{
+  \hsize=\columnwidth\def\baselinestretch{1}%
+  \noindent\unskip\itshape%
+  \par\medskip\noindent\unskip\ignorespaces
+  \titleline{\color{gray!50!white}\titlerule[10pt]}\smallskip}%
+  {\smallskip\titleline{\color{gray!50!white}\titlerule[10pt]}}
+
 
 %%%%%%%%%%% SECTIONING %%%%%%%%%%%
 % KDH commented the below, seeking I, I.A, II, II.A, II.B numbering
@@ -91,11 +110,13 @@
 \renewcommand{\bottomfraction}{0.5}
 
 %%%%%%%%%%% GENERATE PORTIONS OF THE DOCUMENT %%%%%%%%%%%
+
+\renewcommand{\sfdefault}{phv}
+
 \renewcommand{\maketitle}{
-  \begin{strip} \vspace*{-35pt}
-    \begin{center}
+  \begin{strip} %\vspace*{-35pt}
       %title
-      \textbf{\@title}\par 
+    {\sffamily\LARGE\@title\par} 
       \vspace{1em}
       %author
       \begin{tabular}[t]{c}
@@ -115,8 +136,11 @@
         \end{tabular}
         }
       \fi
-    \end{center}
-    \vspace*{-1em}
+      %keywords
+      \if@keywordsdefined 
+        \par\medskip 
+        {\let\and\par \textit{Keywords: }\sffamily\@keywords} 
+      \fi
   \end{strip}
 }
 
