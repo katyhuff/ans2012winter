@@ -1,5 +1,7 @@
 %  American Nuclear Society Nuclear Technology Manuscript Template
-%  by Seth R. Johnson, based on the ANS transaction template and Edward W.
+%  by Katy Huff,
+%  based on the template by Seth R. Johnson, 
+%  that, in turn, was based on the ANS transaction template and Edward W.
 %  Larsen
 %
 % Usage: \documentclass{ntmanuscript}
@@ -9,7 +11,7 @@
 % define \title and \author as usual, and also define \institute and \email
 % define \title and \author as usual, and also define \institute and \email
 
-\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\NeedsTeXFormat{LaTeX2e}
 
 \ProvidesClass{ntmanuscript}[2013/11/16 v1.0 ANS Nuclear Technology Manuscript]
 
@@ -87,30 +89,32 @@
 
 %%%%%%%%%%% SECTIONING %%%%%%%%%%%
 \renewcommand\section{\@startsection
-	{section}{1}{0pt}%		%name, level, indent
+	{section}{1}{\z@}%		%name, level, indent
 	{-\baselineskip}%		%beforeskip
 	{.75\baselineskip}%		%afterskip
 	{\reset@font\bf\MakeUppercase}  %bold, uppercase
 }
-\renewcommand{\thesection}{\Roman{section}} 
+\renewcommand{\thesection}{\@Roman\c@section} 
 
 \renewcommand\subsection{\@startsection
-	{subsection}{1}{0pt}%		%name, level, indent
+	{subsection}{2}{\z@}%		%name, level, indent
 	{-\baselineskip}%		%beforeskip
 	{.75\baselineskip}%		%afterskip
 	{\reset@font\bf}%               %bold
 }
-\renewcommand{\thesubsection}{\thesection.\Alph{subsection}}
+\renewcommand{\thesubsection}{\thesection\@Alph\c@subsection}
 
 \renewcommand\subsubsection{\@startsection
-	{subsubsection}{1}{-1em}%	%name, level, indent
+	{subsubsection}{3}{\z@}%	%name, level, indent
 	{-.75\baselineskip}%		%beforeskip
 	{.5\baselineskip}%		%afterskip
 	{\reset@font\emph}%             %italic
 }
-\renewcommand{\thesubsubsection}{\thesubsection.\roman{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\@roman\c@subsection}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \renewcommand\@biblabel[1]{#1.} %change from [x] to x.
 
 %% reduce spacing in bibliography; thanks to Jose Carlos Santos.
@@ -188,7 +192,6 @@
           \textbf{Keywords: }&\raggedright\@keywords\\ 
         \end{tabularx}
       \fi
-  \pagebreak[4]
 }
 
 \AtBeginDocument{
