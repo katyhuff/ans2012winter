@@ -1,30 +1,45 @@
-\documentclass[12pt]{anstrans}
+\documentclass{ntmanuscript}
 \usepackage[acronym,toc]{glossaries}
 \include{acros}
+\usepackage{multicol}
 \makeglossaries
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{KEY PROCESSES AND PARAMETERS IN A GENERIC CLAY DISPOSAL SYSTEM MODEL}
+\title{Key Processes and Parameters in a Generic Clay Disposal System Model}
 
-\author{KATHRYN D.~HUFF $^1$, W. MARK~NUTT $^2$}
-%% uncomment these next five only if using anstrans
-\institute{$^1$University of California, Department of Nuclear Engineering
-  Berkeley, CA, 94720\\
-$^2$Argonne National Laboratory, Nuclear Engineering Division, 60439}
-\email{huff@berkeley.edu \& wnutt@anl.gov}
-\keywords{radionuclide containment, hydrologic contaminant transport, nuclear 
-repository simulation, clay.}
+% Authors. Separated by commas
+\author{Kathryn D.~Huff $^1$, W. Mark~Nutt$^2$}
+
+% Institutes of the authors
+\institute{$^1$University of California, Department of Nuclear Engineering Berkeley, CA, 94720\\ $^2$Argonne National Laboratory, Nuclear Engineering Division, 60439} 
+
+% Information concerning the person submitting the manuscript
+\submitter{Kathryn D.~Huff}
+\submitteraddress{540 O'Farrell, Apartment 501, San Francisco, CA 94102}
+\submitteremail{katyhuff@gmail.com}
+
+% No more than three keywords, though each can be a phrase
+\keywords{radionuclide containment, hydrologic contaminant transport, 
+nuclear repository simulation.}
+
 \usepackage{graphicx}
 \usepackage{booktabs} % nice rules for tables
 \usepackage{microtype} % if using PDF
 \newcommand{\units}[1] {\:\text{#1}}%
 \newcommand{\SN}{S$_N$}%{S$_\text{N}$}%{$S_N$}%
 
+% Tabularx has small row height :
+\setlength{\extrarowheight}{2pt}
+
 \date{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{abstract}
+\newpage
+
+\twocolumn
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{intro}
 
@@ -36,6 +51,9 @@ repository simulation, clay.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{acks}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{ans}

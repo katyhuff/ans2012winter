@@ -31,7 +31,7 @@ repository concept is modeled using a single rectangular disposal cell. The
 disposal cell models a single cylindrical spent nuclear fuel package surrounded 
 by bentonite buffer material and emplaced in the clay geologic medium. Using 
 reflective boundary conditions in the horizontal plane, an infinite disposal 
-cell array is modeled \cite{clayton_generic_2009}.
+cell array is modeled \cite{nutt_generic_2009}.
 
 The model includes vertical advective fast pathway as well as an \gls{EBS} which 
 can undergo rate based dissolution and barrier failure.  Releases from the 
@@ -71,11 +71,13 @@ on parameters that affect the mean of the peak annual dose.  The mean of the
 peak annual dose,
 
 \begin{align} \label{MoP}
-  D_{MoP,i} &= \frac{\sum_{r=1}^{N}{\max\left[\left.D_{r,i}(t)\right|_{\forall t}\right]}}{N}
+  D_{MoP,i} = &\frac{\sum_{r=1}^{N}{\max\left[\left.D_{r,i}(t)\right|_{\forall t}\right]}}{N}
   \intertext{where}
-  D_{MoP,i} &= \mbox{ mean of peak annual dose due to isotope i } [mrem/yr]\nonumber\\
-  D_{r,i}(t) &= \mbox{ year t dose in realization r due to isotope i } [mrem/yr]\nonumber\\
-  N &= \mbox{number of realizations, } \nonumber
+  D_{MoP,i} = &\mbox{ mean of peak annual dose}\nonumber\\
+            &\mbox{  due to isotope i } [mrem/yr]\nonumber\\
+  D_{r,i}(t) = &\mbox{ year t dose in realization r}\nonumber\\
+             &\mbox{  due to isotope i } [mrem/yr]\nonumber\\
+  N = &\mbox{number of realizations, } \nonumber
 \end{align}
 
 is a conservative metric of repository performance and should not be confused 
