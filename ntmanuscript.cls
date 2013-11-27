@@ -46,6 +46,9 @@
 % For the count of pages, tables, and figures on the title page
 \RequirePackage{totcount}
 
+% For line numbers (suggested by bob)
+\RequirePackage{lineno}
+
 %%%%%%%%%%% REQUIRED VARIABLES %%%%%%%%%%%
 \newif\if@institutedefined
 \@institutedefinedfalse
@@ -88,15 +91,15 @@
 
 
 %%%%%%%%%%% SECTIONING %%%%%%%%%%%
-\renewcommand\section{\@startsection
+\renewcommand\section{\@startsection%
 	{section}{1}{\z@}%		%name, level, indent
 	{-\baselineskip}%		%beforeskip
 	{.75\baselineskip}%		%afterskip
-	{\reset@font\bf\MakeUppercase}  %bold, uppercase
+	{\reset@font\bf\MakeUppercase}% %bold, uppercase
 }
 \renewcommand{\thesection}{\@Roman\c@section} 
 
-\renewcommand\subsection{\@startsection
+\renewcommand\subsection{\@startsection%
 	{subsection}{2}{\z@}%		%name, level, indent
 	{-\baselineskip}%		%beforeskip
 	{.75\baselineskip}%		%afterskip
@@ -195,6 +198,9 @@
 }
 
 \AtBeginDocument{
+  \setpagewiselinenumbers
+  \modulolinenumbers[5]
+  \linenumbers
   \maketitle
 }
 
