@@ -91,7 +91,8 @@
 
 
 %%%%%%%%%%% SECTIONING %%%%%%%%%%%
-\renewcommand\section{\@startsection%
+\renewcommand{\section}{\renewcommand{\@sec@title@format}[1]{\MakeUppercase{##1}}%
+  \@startsection%
 	{section}{1}{\z@}%		%name, level, indent
 	{-\baselineskip}%		%beforeskip
 	{.75\baselineskip}%		%afterskip
@@ -99,19 +100,21 @@
 }
 \renewcommand{\thesection}{\@Roman\c@section} 
 
-\renewcommand\subsection{\@startsection%
+\renewcommand{\subsection}{\renewcommand{\@sec@title@format}[1]{##1}%
+  \@startsection%
 	{subsection}{2}{\z@}%		%name, level, indent
 	{-\baselineskip}%		%beforeskip
 	{.75\baselineskip}%		%afterskip
-	{\reset@font\bf}%               %bold
+	{\reset@font\bfseries}%               %bold
 }
-\renewcommand{\thesubsection}{\thesection\@Alph\c@subsection}
+\renewcommand{\thesubsection}{\thesection.\@Alph\c@subsection}
 
-\renewcommand\subsubsection{\@startsection
+\renewcommand{\subsubsection}{\renewcommand{\@sec@title@format}[1]{\emph{##1}}%
+  \@startsection%
 	{subsubsection}{3}{\z@}%	%name, level, indent
 	{-.75\baselineskip}%		%beforeskip
 	{.5\baselineskip}%		%afterskip
-	{\reset@font\emph}%             %italic
+	{\reset@font}%             %italic
 }
 \renewcommand{\thesubsubsection}{\thesubsection.\@roman\c@subsection}
 

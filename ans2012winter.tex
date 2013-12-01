@@ -2,6 +2,7 @@
 \usepackage[acronym,toc]{glossaries}
 \include{acros}
 \usepackage{multicol}
+\usepackage{float}
 \makeglossaries
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Key Processes and Parameters in a Generic Clay Disposal System Model}
@@ -39,15 +40,13 @@ nuclear repository simulation.}
 \input{abstract}
 \newpage
 
-\twocolumn
+%\twocolumn
+\begin{multicols*}{2}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{intro}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{background}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{work}
+\input{methodology}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{results}
@@ -62,4 +61,5 @@ nuclear repository simulation.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{plain}
 \bibliography{bibliography}
+\end{multicols*}
 \end{document}
