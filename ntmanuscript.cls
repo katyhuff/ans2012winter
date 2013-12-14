@@ -98,7 +98,7 @@
 	{.75\baselineskip}%		%afterskip
 	{\reset@font\bf\MakeUppercase}% %bold, uppercase
 }
-\renewcommand{\thesection}{\@Roman\c@section} 
+\renewcommand{\thesection}{\@Roman\c@section.} 
 
 \renewcommand{\subsection}{\renewcommand{\@sec@title@format}[1]{##1}%
   \@startsection%
@@ -107,7 +107,7 @@
 	{.75\baselineskip}%		%afterskip
 	{\reset@font\bfseries}%               %bold
 }
-\renewcommand{\thesubsection}{\thesection.\@Alph\c@subsection}
+\renewcommand{\thesubsection}{\thesection\@Alph\c@subsection.}
 
 \renewcommand{\subsubsection}{\renewcommand{\@sec@title@format}[1]{\emph{##1}}%
   \@startsection%
@@ -116,7 +116,7 @@
 	{.5\baselineskip}%		%afterskip
 	{\reset@font}%             %italic
 }
-\renewcommand{\thesubsubsection}{\thesubsection.\@roman\c@subsection}
+\renewcommand{\thesubsubsection}{\thesubsection\@roman\c@subsection.}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
