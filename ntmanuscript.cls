@@ -201,6 +201,7 @@
 }
 
 \AtBeginDocument{
+  \renewcommand{\thetable}{\Roman{table}}
   \setpagewiselinenumbers
   \modulolinenumbers[5]
   \linenumbers

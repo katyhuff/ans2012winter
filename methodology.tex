@@ -2,29 +2,33 @@
 
 The disposal concept modeled by the Clay \gls{GDSM} includes an \gls{EBS} which 
 can undergo rate-based dissolution and barrier failure. Releases from the 
-\gls{EBS} enter 
-near-field and subsequently far-field host rock regions in which diffusive and 
-advective transport take place, attenuated by solubility limits as well as 
-sorption and dispersion phenomena.  
+\gls{EBS} enter near-field and subsequently far-field host rock regions in which 
+diffusive and advective transport take place, attenuated by solubility limits as 
+well as sorption and dispersion phenomena.  
 
-The Clay \gls{GDSM} models a single waste form, a waste package, additional 
-\glspl{EBS}, 
-an \gls{EDZ}, and a far-field zone using a batch reactor mixing cell framework. 
-This waste unit cell is modeled 
-with boundary conditions such that it may be repeated assuming an infinite 
-repository configuration. The waste form and engineered barrier system are 
-modeled as well-mixed volumes 
-and radial transport away from the cylindrical base case unit cell is modeled in 
-one dimension. Two radionuclide release pathways are considered. One is the 
-nominal, undisturbed case, while the other is a fast pathway capable of 
-simulating a hypothetical disturbed case such as an intrusion scenario 
-\cite{clayton_generic_2011}.
+This parametric study covered a range of diffusivity, advective velocity, 
+sorption, solubility, and degradation parameters seen in homogeneous reducing 
+environments. It utilized a single and dual parameter sampling methodology that 
+captured single parameter effects as well as coupled effects.
+
+The metric by which repository performance was measured in this analysis was the 
+mean of the peak annual dose. 
 
 \subsection{Clay Generic Disposal System Model}
-
 % used existing gdsms 
 These analyses were performed using the Clay \gls{GDSM} developed by the 
 \gls{UFD} campaign \cite{clayton_generic_2011}. 
+
+The Clay \gls{GDSM} models a single waste form, a waste package, additional 
+\glspl{EBS}, an \gls{EDZ}, and a far-field zone using a batch reactor mixing 
+cell framework.  This waste unit cell is modeled with boundary conditions such 
+that it may be repeated assuming an infinite repository configuration. The waste 
+form and engineered barrier system are modeled as well-mixed volumes and radial 
+transport away from the cylindrical base case unit cell is modeled in one 
+dimension. Two radionuclide release pathways are considered. One is the nominal, 
+undisturbed case, while the other is an advective fast pathway capable of 
+simulating a hypothetical disturbed case such as an intrusion scenario 
+\cite{clayton_generic_2011}.
 
 The Clay \gls{GDSM} is built on the GoldSim simulation framework and contaminant 
 transport model.  This radionuclide transport toolset simulates chemical and 
@@ -43,14 +47,12 @@ fuel packages within a clay repository environment, 500 meters beneath the
 earth's surface. In this repository concept, the waste packages contain an 
 inventory of spent nuclear fuel, are emplaced horizontally in excavated tunnels, 
 and are backfilled by a reducing bentonite clay buffer material within the 
-tunnel \cite{nutt_generic_2009}. 
-
-In the \gls{UFD} \gls{GDSM} tool that was used for this analysis, the clay 
-repository concept is modeled using a single rectangular disposal cell. The 
-disposal cell models a single cylindrical spent nuclear fuel package surrounded 
-by bentonite buffer material and emplaced in the clay geologic medium. Using 
-reflective boundary conditions in the horizontal plane, an infinite disposal 
-cell array is modeled \cite{nutt_generic_2009}.
+tunnel \cite{nutt_generic_2009}.  The repository concept is modeled using a 
+single rectangular disposal cell. The disposal cell models a single cylindrical 
+spent nuclear fuel package surrounded by bentonite buffer material and emplaced 
+in the clay geologic medium. Using reflective boundary conditions in the 
+horizontal plane, an infinite disposal cell array is modeled 
+\cite{nutt_generic_2009}.
 
 The model includes a vertical advective fast pathway as well as an \gls{EBS} which 
 can undergo rate-based dissolution and barrier failure.  Releases from the 
@@ -62,7 +64,8 @@ well as sorption and dispersion phenomena \cite{clayton_generic_2011}.
 
 This work has undertaken an analysis strategy to develop a many-dimensional 
 overview of the key factors in repository performance. To achieve this, 
-both individual and dual parametric cases were performed.
+both individual and dual parametric cases were performed over a range of 
+values.
 
 Individual parameter cases varied a single parameter of interest in 
 detail over a broad range of values. Dual parameter cases were 
@@ -84,7 +87,7 @@ nutt_generic_2009}.
 
 \subsection{Mean of the Peak Annual Dose}
 
-In this analysis, repository performance is quantified by radiation dose to a 
+In this analysis, repository performance is quantified by annual dose to a 
 hypothetical receptor. Specifically, this sensitivity analysis focuses 
 on parameters that affect the mean of the peak annual dose.  The mean of the 
 peak annual dose,

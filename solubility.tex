@@ -6,20 +6,13 @@ solubility. This behavior is restricted by the solute's solubility limit, descri
 by an equilibrium constant that depends upon temperature, water chemistry, and 
 the properties of the element. 
 
-By varying the multiplication factor applied to the expected solubility limit, 
-$\langle S_i\rangle$, this analysis varied elemental solubility limits, $S_i$, 
-for each isotope $i$, as detailed in Table \ref{tab:Cases}.
-This method preserves, in some sense, the relative solubility 
-limits between isotopes, which vary over many magnitudes.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\linewidth]{solubility.eps}
-  \caption{Solubility limit sensitivity. The peak annual dose due to an 
-  inventory, 
-  $N$, of each isotope.}
-  \label{fig:SolSum}
-\end{figure}
+For modeling simplicity, the solubility limit of each isotope, $i$, was assumed 
+to have a solubility limit, $S_i$, equal to the elemental solubility limit of 
+the associated element.  By varying the multiplication factor applied to the 
+expected solubility limit, $\langle S_i\rangle$, this analysis varied solubility 
+limit for each isotope $i$, as detailed in Table \ref{tab:Cases}.  This method 
+preserves, in some sense, the relative solubility limits between isotopes, which 
+vary over many magnitudes.  
 
 As seen in Figure \ref{fig:SolSum}, for solubility limits below a threshold, 
 approximately $1\times10^{-10}[mol\cdot m^{-3}]$, dose releases were directly 
@@ -30,4 +23,13 @@ further increase to the limit had no effect on the peak dose. This demonstrated
 the situation in which the solubility limit was so high that even complete 
 dissolution of the waste inventory into the pore water was insufficient to reach 
 the solubility limit.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{solubility.eps}
+  \caption{Solubility limit sensitivity. The peak annual dose due to an 
+  inventory, 
+  $N$, of each isotope.}
+  \label{fig:SolSum}
+\end{figure}
 
